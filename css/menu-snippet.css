@@ -1,0 +1,70 @@
+﻿/* ===== Mobile menu (hamburger) - paste at the very END of style.css ===== */
+.menu-btn {
+    display: none;
+    background: none;
+    border: 0;
+    padding: 8px;
+    cursor: pointer
+}
+
+    .menu-btn span {
+        display: block;
+        width: 26px;
+        height: 3px;
+        margin: 5px 0;
+        background: #fff;
+        border-radius: 2px;
+        transition: transform .25s,opacity .25s
+    }
+
+@media(max-width:760px) {
+    header .wrap {
+        flex-direction: row;
+        height: 76px;
+        padding: 0 20px;
+        position: relative
+    }
+
+    header .logo img {
+        height: 52px
+    }
+
+    .menu-btn {
+        display: block
+    }
+
+    header nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--brand);
+        flex-direction: column;
+        gap: 0;
+        padding: 6px 20px 14px;
+        box-shadow: 0 14px 24px rgba(0,0,0,.25);
+        font-size: 1rem
+    }
+
+        header nav.open {
+            display: flex
+        }
+
+        header nav a {
+            padding: 14px 0;
+            border-bottom: 1px solid rgba(255,255,255,.15)
+        }
+
+    .menu-btn.open span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg)
+    }
+
+    .menu-btn.open span:nth-child(2) {
+        opacity: 0
+    }
+
+    .menu-btn.open span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg)
+    }
+}

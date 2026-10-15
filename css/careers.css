@@ -1,0 +1,102 @@
+﻿.cr-body .wrap {
+    max-width: 860px
+}
+
+.cr-body h2 {
+    margin-top: 44px
+}
+
+.cr-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+    gap: 20px;
+    margin: 22px 0 8px
+}
+
+.cr-card {
+    background: var(--card);
+    border: 2px solid var(--line);
+    border-radius: 16px;
+    padding: 24px 22px
+}
+
+    .cr-card h3 {
+        font-size: 1.05rem
+    }
+
+    .cr-card p {
+        margin: 0;
+        font-size: .92rem
+    }
+
+.cr-ic {
+    display: grid;
+    place-items: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: var(--brand);
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 12px
+}
+
+.cr-list {
+    list-style: none;
+    padding: 0;
+    margin: 16px 0 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+    gap: 10px
+}
+
+    .cr-list li {
+        display: flex;
+        gap: 10px;
+        font-size: .95rem
+    }
+
+        .cr-list li:before {
+            content: "\2713";
+            flex: none;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--accent);
+            color: #fff;
+            display: grid;
+            place-items: center;
+            font-size: .75rem
+        }
+
+.contact select {
+    width: 100%;
+    background: transparent;
+    border: 1px solid #fff;
+    color: #d6d0f3;
+    padding: 11px 12px;
+    font: inherit;
+    font-size: .88rem
+}
+
+    .contact select option {
+        color: #2a1a6e;
+        background: #fff
+    }
+
+#formNote {
+    margin: 0;
+    font-size: .85rem;
+    color: #fff;
+    min-height: 1.2em
+}
+
+.info a:hover {
+    color: var(--accent)
+}
+
+.credit {
+    font-size: .75rem;
+    opacity: .75;
+    margin-top: 6px
+}

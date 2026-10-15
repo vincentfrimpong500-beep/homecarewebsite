@@ -1,0 +1,73 @@
+﻿/* ===== Colored lines on images - paste at the very END of style.css ===== */
+
+/* Service cards: colorful gradient outline, a different color for each card */
+.arch {
+    border: 3px solid transparent;
+    transition: transform .3s ease,box-shadow .3s ease
+}
+
+    .arch:nth-child(1) {
+        background: linear-gradient(var(--card),var(--card)) padding-box,linear-gradient(135deg,#ff7a3d,#ff5c8a) border-box
+    }
+
+    .arch:nth-child(2) {
+        background: linear-gradient(var(--card),var(--card)) padding-box,linear-gradient(135deg,#27c1a6,#4aa3c7) border-box
+    }
+
+    .arch:nth-child(3) {
+        background: linear-gradient(var(--card),var(--card)) padding-box,linear-gradient(135deg,#6a3fd0,#3b82f6) border-box
+    }
+
+    .arch:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 16px 30px rgba(61,26,140,.18)
+    }
+
+/* Why Choose Us circle: spinning colored ring + a thin dashed ring */
+.circle {
+    width: min(calc(100% - 64px),340px)
+}
+
+    .circle:before, .circle:after {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        pointer-events: none
+    }
+
+    .circle:before {
+        inset: -12px;
+        border: 4px solid transparent;
+        border-top-color: var(--accent);
+        border-right-color: #ffb020;
+        border-bottom-color: #27c1a6;
+        border-left-color: #6a3fd0;
+        animation: spin 10s linear infinite
+    }
+
+    .circle:after {
+        inset: -26px;
+        border: 2px dashed #6a3fd0;
+        opacity: .45;
+        animation: spin 24s linear infinite reverse
+    }
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+/* Testimonial photo: double colored line around the arch */
+.testi .photo {
+    box-shadow: 0 0 0 4px var(--bg),0 0 0 7px var(--accent),0 0 0 11px var(--bg),
+}
+
+
+}
+
+@media(prefers-reduced-motion:reduce) {
+    .circle:before, .circle:after {
+        animation: none
+    }
+}
